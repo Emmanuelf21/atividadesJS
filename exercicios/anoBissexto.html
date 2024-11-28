@@ -41,14 +41,18 @@
         function verificar(){
             let ano = document.getElementById("ano").value;
             let confirma = document.querySelector(".confirmar");
-
-            if(ano % 4 == 0 && ano % 100 != 0){
-                confirma.innerText = `O ano ${ano} é bissexto!`;
-            }else if(ano % 400 == 0){
-                confirma.innerText = `O ano ${ano} é bissexto!`;
+            if(ano != ""){
+                if(ano % 4 == 0 && ano % 100 != 0){
+                    confirma.innerText = `O ano ${ano} é bissexto!`;
+                }else if(ano % 400 == 0){
+                    confirma.innerText = `O ano ${ano} é bissexto!`;
+                }
+                else{
+                    confirma.innerText = `O ano ${ano} não é bissexto!`;
+                }
             }
             else{
-                confirma.innerText = `O ano ${ano} não é bissexto!`;
+                alert("Insira o ano para verificar!");
             }
         }
     </script>

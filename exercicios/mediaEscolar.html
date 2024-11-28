@@ -5,23 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        .flex{
-            display: flex;
-            flex-direction: column;
-            width: fit-content;
-            gap: 1rem;
-            margin-bottom: 0.7rem;
-            margin-top: 0.7rem;
-        }
+      body {
+        padding: 1rem;
+      }
+      .flex {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        gap: 1rem;
+        margin-bottom: 0.7rem;
+        margin-top: 1.3rem;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+        background: radial-gradient(circle at 80% -10%, #fff, #181818);
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+      }
     </style>
   </head>
   <body>
     <a href="../index.html">Home</a>
     <div class="flex">
-        <input type="number" class="nota1" placeholder="nota prova 1" />
-        <input type="number" class="nota2" placeholder="nota prova 2" />
-        <input type="number" class="nota3" placeholder="nota prova 3" />
-        <input type="number" class="nota4" placeholder="nota prova 4" />
+      <input type="number" class="nota1" placeholder="nota prova 1" />
+      <input type="number" class="nota2" placeholder="nota prova 2" />
+      <input type="number" class="nota3" placeholder="nota prova 3" />
+      <input type="number" class="nota4" placeholder="nota prova 4" />
     </div>
     <button onclick="verificar()">Enviar</button>
     <h2></h2>
@@ -32,18 +43,17 @@
         let nota3 = parseFloat(document.querySelector(".nota3").value);
         let nota4 = parseFloat(document.querySelector(".nota4").value);
 
-        let media = (nota1 + nota2 + nota3 + nota4)/4;
+        let media = (nota1 + nota2 + nota3 + nota4) / 4;
 
         let texto = document.querySelector("h2");
-        
-        if(media > 10) {
-            console.log(media);
+
+        if (media > 10) {
+          console.log(media);
           texto.innerText = "Média inválida!";
-        }else if (media>=7){
+        } else if (media >= 7) {
           texto.innerText = "Aprovado!";
-        } 
-        else if(media >= 5) {
-            texto.innerText = "Recuperação!";
+        } else if (media >= 5) {
+          texto.innerText = "Recuperação!";
         } else {
           texto.innerText = "Reprovado!";
         }

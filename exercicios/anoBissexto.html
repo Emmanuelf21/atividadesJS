@@ -8,22 +8,34 @@
         body {
         padding: 1rem;
       }
-
-      a {
+      div{
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        gap: 1rem;
+      }
+      div button{
+        width: fit-content;
+      }
+      a, button{
         text-decoration: none;
         color: white;
         background: radial-gradient(circle at 80% -10%, #fff, #181818);
         padding: 10px;
         border-radius: 5px;
         margin-bottom: 1rem;
+        border: none;
+        cursor: pointer;
       }
     </style>
 </head>
 <body>
     <a href="../index.html">Home</a>
     <h2>Este ano é bissexto?</h2>
-    <input type="text" name="ano" id="ano" placeholder="Digite o ano...">
-    <button class="btn" onclick="verificar()">verificar</button>
+    <div>
+        <input type="text" name="ano" id="ano" placeholder="Digite o ano...">
+        <button class="btn" onclick="verificar()">verificar</button>
+    </div>
     <p class="confirmar"></p>
     <script>
         function verificar(){

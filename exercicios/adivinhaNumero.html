@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
     <style>
       .oculto {
         display: none;
@@ -11,37 +12,14 @@
       .visivel {
         display: block;
       }
-      body {
-        padding: 1rem;
-      }
-      div {
-        display: flex;
-        flex-direction: column;
-        width: fit-content;
-        gap: 1rem;
-      }
-
-      div button {
-        width: fit-content;
-      }
-      a,
-      button {
-        text-decoration: none;
-        color: white;
-        background: radial-gradient(circle at 80% -10%, #fff, #181818);
-        padding: 10px;
-        border-radius: 5px;
-        margin-bottom: 1rem;
-        cursor: pointer;
-        border: none;
-      }
+     
     </style>
   </head>
   <body>
     <a href="../index.html">Home</a>
 
     <p>Escolha um numero de 1 a 10.</p>
-    <div>
+    <div class="flex">
       <input type="text" name="numero" id="numeroEscolhido" placeholder="" />
       <button class="btn">Chutar</button>
     </div>

@@ -52,15 +52,4 @@ body {
   button:hover{
     transform: translateZ(40px);
   }
-  form {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    gap: 1rem;
-    margin-bottom: 0.7rem;
-    margin-top: 1.7rem;
-  }
-  form button{
-    width: fit-content;
-    cursor: pointer;
-  }
+  

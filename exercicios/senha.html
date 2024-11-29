@@ -5,24 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        #mostraSenha{
+            width: fit-content;
+        }
+    </style>
 </head>
 <body>
     <a href="../index.html">Home</a>
     <div class="flex">
         <label for="senha">Digite a senha:</label>
         <input type="password" name="senha" id="senha" placeholder="Digite sua senha" />
-        <button id="teste">verificar</button>
+        <div>
+            <button id="verificar">verificar</button>
+            <button id="mostraSenha">Mostrar/ocultar</button>
+        </div>
+
     </div>
     <div id="caixa" class="flex oculto">
 
     </div>
     <script>
         let senha = prompt("Digite uma senha para cadastrar!");
-        let btn = document.getElementById("teste");
-        
+        let btnVerifica = document.getElementById("verificar");
+        let btnMostraSenha = document.querySelector("#mostraSenha");
 
-        btn.addEventListener("click", () => {verificarSenha(senha)});
-        
+        btnVerifica.addEventListener("click", () => verificarSenha(senha));
+        btnMostraSenha.addEventListener("click", ()=> mostraSenha());
+
         function verificarSenha(senha){
             let senhaInserida = document.querySelector("#senha").value;
             let imprimeFeedback = document.createElement("h3");
@@ -36,6 +46,15 @@
                 imprimeFeedback = "Senha incorreta, tente novamente!";
                 campoFeedback.innerHTML= imprimeFeedback;
                 campoFeedback.classList.replace("oculto", "visivel");
+            }
+        }
+
+        function mostraSenha(){
+            let campoSenha = document.querySelector("#senha");
+            if(campoSenha.type == "password"){
+                campoSenha.type = 'text';
+            }else{
+                campoSenha.type = 'password';
             }
         }
     </script>

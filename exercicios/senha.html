@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <a href="../index.html">Home</a>
+    <div class="flex">
+        <label for="senha">Digite a senha:</label>
+        <input type="password" name="senha" id="senha" placeholder="Digite sua senha" />
+        <button id="teste">verificar</button>
+    </div>
+    <div id="caixa" class="flex oculto">
+
+    </div>
+    <script>
+        let senha = prompt("Digite uma senha para cadastrar!");
+        let btn = document.getElementById("teste");
+        
+
+        btn.addEventListener("click", () => {verificarSenha(senha)});
+        
+        function verificarSenha(senha){
+            let senhaInserida = document.querySelector("#senha").value;
+            let imprimeFeedback = document.createElement("h3");
+            let campoFeedback = document.querySelector("#caixa");
+
+            if(senha == senhaInserida){
+                imprimeFeedback = "Senha correta!"
+                campoFeedback.innerHTML= imprimeFeedback;
+                campoFeedback.classList.replace("oculto", "visivel");
+            }else{
+                imprimeFeedback = "Senha incorreta, tente novamente!";
+                campoFeedback.innerHTML= imprimeFeedback;
+                campoFeedback.classList.replace("oculto", "visivel");
+            }
+        }
+    </script>
+</body>
+</html>

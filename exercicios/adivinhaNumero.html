@@ -26,11 +26,12 @@
       <button class="btn">Chutar</button>
     </div>
     <h1 class="oculto">Parabéns, Você acertou!</h1>
-    
+
     <script>
       let numeroAleatorio = Math.round(Math.random() * 10);
       let btn = document.querySelector(".btn");
       let chute;
+      
       btn.addEventListener("click", () => {
         chute = document.querySelector("#numeroEscolhido").value;
         if (chute == numeroAleatorio) {

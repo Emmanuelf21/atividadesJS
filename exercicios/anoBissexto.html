@@ -18,11 +18,12 @@
 
     <!-- saida confirmando se é bissexto -->
     <p class="confirmar"></p>
-    
+
     <script>
         function verificar(){
             let ano = document.getElementById("ano").value;
             let confirma = document.querySelector(".confirmar");
+            
             if(ano != ""){
                 if(ano % 4 == 0 && ano % 100 != 0){
                     confirma.innerText = `O ano ${ano} é bissexto!`;

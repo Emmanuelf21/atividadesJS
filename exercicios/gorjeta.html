@@ -21,7 +21,7 @@
     <!-- resposta dos valores -->
     <h2 class="gorjeta">Valor gorjeta: R$</h2>
     <h2 class="total">Valor total: R$</h2> 
-    
+
     <script>
       function calcular() {
         let valor = parseFloat(document.querySelector("#valor").value);
@@ -29,6 +29,7 @@
         let valorTotal;
         let textoGorjeta = document.querySelector(".gorjeta");
         let textoTotal = document.querySelector(".total");
+        
         switch (satisfacao) {
           case "bom":
             valorTotal = valor * 1.1;

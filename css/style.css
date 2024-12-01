@@ -2,11 +2,13 @@ body {
     background-image: url("../imagens/background.jpg");
     background-repeat: none;
     background-size: 100% 100%;
-    position: relative;
+    /* position: relative; */
     height: 100vh;
-    display: block;
+    display: flex;
+    flex-direction: column;
     align-content: center;
-    justify-items: center;
+    justify-content: center;
+    align-items: center;
     font-family: 'Courier New', Courier, monospace;
   }
   .flex, form{
@@ -22,6 +24,7 @@ body {
     border-radius: 10px;
     transform-style: preserve-3d;
     transform: perspective(1000px);
+    height: fit-content;
   }
   .flex button{
     width: fit-content;
